@@ -105,6 +105,7 @@ class ProductRentController extends ControladorBase{
         $idUserAdmin        = "0";
         $idTypeSchedule     = $_POST['hdn_idTypeSchedule'];
         $vDateCreation      = $_POST['hdn_vDateCreation'];
+        $vDateUpdate        = $_POST['hdn_vDateCreation'];
         $vDateEvent         = "";
         $vDateDelivery      = "";
         $idHour             = "0";
@@ -175,6 +176,7 @@ class ProductRentController extends ControladorBase{
         $scheduleModel->vDateCreation       = $vDateCreation;
         $scheduleModel->vDateEvent          = $vDateEvent;
         $scheduleModel->vDateDelivery       = $vDateDelivery;
+        $scheduleModel->vDateUpdate         = $vDateUpdate;
         $scheduleModel->vImageINE           = $vImageINE;
         $scheduleModel->vImageProduct       = $vImageProduct;
         $scheduleModel->vImageAddressProof  = $vImageAddressProof;

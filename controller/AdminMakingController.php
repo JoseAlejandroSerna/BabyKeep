@@ -103,6 +103,7 @@ class AdminMakingController extends ControladorBase{
         $idUserAdmin        = $_SESSION['idUser'];
         $idTypeSchedule     = $_POST['hdn_idTypeSchedule_rent'];
         $vDateCreation      = $_POST['hdn_vDateCreation'];
+        $vDateUpdate        = $_POST['hdn_vDateCreation'];
         $vDateEvent         = $_POST["hdn_date_schedule"];
         $vDateDelivery      = "";
         $idHour             = $_POST["idHour_making"];
@@ -150,6 +151,7 @@ class AdminMakingController extends ControladorBase{
         $scheduleModel->vDateCreation       = $vDateCreation;
         $scheduleModel->vDateEvent          = $vDateEvent;
         $scheduleModel->vDateDelivery       = $vDateDelivery;
+        $scheduleModel->vDateUpdate         = $vDateUpdate;
         $scheduleModel->vImageINE           = $vImageINE;
         $scheduleModel->vImageProduct       = $vImageProduct;
         $scheduleModel->vImageAddressProof  = $vImageAddressProof;

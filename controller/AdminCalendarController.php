@@ -76,6 +76,7 @@ class AdminCalendarController extends ControladorBase{
         $scheduleModel                      = new ScheduleModel($this->adapter);
         $scheduleModel->idSchedule          = $_POST["hdn_idSchedule"];
         $scheduleModel->vAdvance            = $_POST["hdn_vAdvance"];
+        $scheduleModel->vDateUpdate         = $_POST["hdn_vDateUpdate"];
         $scheduleModel->iStatus             = $_POST["hdn_iStatus"];
         
         $vAdvance = intval($_POST["hdn_vAdvance"]);

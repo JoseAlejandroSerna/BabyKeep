@@ -76,6 +76,7 @@
                                                             							<th>Pendiente</th>
                                                             							<th>Fecha creación</th>
                                                             							<th>Fecha de evento</th>
+																						<th>Ultima actualización</th>
                                                             							<?php if ($permissions_edit) {?>
                                                             							<th></th>
 																						<?php }?>
@@ -170,6 +171,7 @@
 																						<td><?php echo "$".$iPending;?></td>
 																						<td><?php echo $schedule->vDateCreation;?></td>
 																						<td><?php echo $schedule->vDateEvent;?></td>
+																						<td><?php echo $schedule->vDateUpdate;?></td>
                                                             							<?php if ($permissions_edit) {?>
 																						<td>
 																							<span class="waves-effect waves-dark btn btn-outline-light text-success float-left" onclick="Edit(<?php echo $schedule->idSchedule;?>,'<?php echo $vUser;?>','<?php echo $vUserAdmin;?>','<?php echo $vBranch;?>','<?php echo $vProduct;?>','<?php echo $vSize;?>','<?php echo $vColor;?>','<?php echo $vHour;?>','<?php echo $vTypeSchedule;?>','<?php echo $schedule->vPrice;?>','<?php echo $schedule->vAvance;?>',<?php echo $iPending;?>,'<?php echo $schedule->vDateEvent;?>','<?php echo $schedule->vDateDelivery;?>')"><i data-feather="edit" data-toggle="tooltip" data-placement="top" title="Editar"></i></span>
@@ -197,6 +199,7 @@
                                                             							<th>Pendiente</th>
                                                             							<th>Fecha creación</th>
                                                             							<th>Fecha de evento</th>
+																						<th>Ultima actualización</th>
                                                             							<?php if ($permissions_edit) {?>
                                                             							<th></th>
 																						<?php }?>

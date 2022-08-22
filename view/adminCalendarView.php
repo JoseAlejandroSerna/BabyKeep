@@ -47,11 +47,12 @@
                         </div>
                     </div>
                     <!-- ============================================================== -->
-					<form method="post" class="row" action="<?php echo $helper->url("AdminCalendar","update"); ?>" style="display:none;">
+					<form method="post" class="row" action="<?php echo $helper->url($view,"update"); ?>" style="display:none;">
 
-						<input type="hidden" class="hdn_idSchedule" name="hdn_idSchedule" value=""/>
-						<input type="hidden" class="hdn_vAdvance" name="hdn_vAdvance" value=""/>
-						<input type="hidden" class="hdn_iStatus" name="hdn_iStatus" value=""/>
+						<input type="hidden" class="hdn_idSchedule" 	name="hdn_idSchedule" value=""/>
+						<input type="hidden" class="hdn_vAdvance" 		name="hdn_vAdvance" value=""/>
+						<input type="hidden" class="hdn_iStatus" 		name="hdn_iStatus" value=""/>
+						<input type="hidden" class="hdn_vDateUpdate" 	name="hdn_vDateUpdate" value="<?php echo date('Y-m-d');?>"/>
 
 						<button type="submit" class="btn-link btn_update" name="btn_update" style="display:none;">Cart</button>
 					</form>

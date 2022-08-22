@@ -40,6 +40,7 @@ class AdminReportSaleController extends ControladorBase{
             $info_admin_size            = $sizeModel->getAll();
 
             $notificationsModel         = new NotificationsModel($this->adapter);
+            $info_notifications         = $notificationsModel->reset_sale();
             $info_notifications         = $notificationsModel->getAll();
 
             //Cargamos la vista index y le pasamos valores

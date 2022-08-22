@@ -40,8 +40,9 @@ class AdminReportRentController extends ControladorBase{
             $all_user                   = $users->getAll();
 
             $notificationsModel         = new NotificationsModel($this->adapter);
+            $info_notifications         = $notificationsModel->reset_rent();
             $info_notifications         = $notificationsModel->getAll();
-
+            
 
             //Cargamos la vista index y le pasamos valores
             $this->view("adminReportRent",array(

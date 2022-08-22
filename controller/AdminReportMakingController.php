@@ -40,6 +40,7 @@ class AdminReportMakingController extends ControladorBase{
             $all_user                   = $users->getAll();
 
             $notificationsModel         = new NotificationsModel($this->adapter);
+            $info_notifications         = $notificationsModel->reset_making();
             $info_notifications         = $notificationsModel->getAll();
 
 

@@ -571,7 +571,7 @@ function valKidByCard(id)
 	$.each(JSON_card,function(i,card){
 		if(card.idUser == id)
 		{
-			dateValid = dateIsBetweenToDates(card.vStartDate,card.vEndDate,date);
+			dateValid = dateIsBetweenToDatesUser(card.vStartDate,card.vEndDate,date);
 		}	
 	});
 	if(dateValid)
@@ -695,7 +695,7 @@ function descPromotion(total)
 	return desc
 }
 
-function dateIsBetweenToDates(vStartDate,vEndDate,date)
+function dateIsBetweenToDatesUser(vStartDate,vEndDate,date)
 {
 	var dateStar = vStartDate;
 	var dateEnd = vEndDate;

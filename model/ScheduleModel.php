@@ -37,6 +37,7 @@ class ScheduleModel{
     public $vDateCreation = "";
     public $vDateEvent = "";
     public $vDateDelivery = "";
+    public $vDateUpdate = "";
     public $vImageINE = "";
     public $vImageProduct = "";
     public $vImageAddressProof = "";
@@ -74,7 +75,7 @@ class ScheduleModel{
 
     public function create()
     {
-        $query="INSERT INTO $this->table (idSchedule,idUser,idUserAdmin,idBranch,idTypeSchedule,idHour,idProduct,idColor,idSize,vPrice,vAdvance,iCheckEvent,iAge,vMinPrice,vMaxPrice,vDateCreation,vDateEvent,vDateDelivery,vImageINE,vImageProduct,vImageAddressProof,iStatus) 
+        $query="INSERT INTO $this->table (idSchedule,idUser,idUserAdmin,idBranch,idTypeSchedule,idHour,idProduct,idColor,idSize,vPrice,vAdvance,iCheckEvent,iAge,vMinPrice,vMaxPrice,vDateCreation,vDateEvent,vDateDelivery,vDateUpdate,vImageINE,vImageProduct,vImageAddressProof,iStatus) 
                 VALUES(NULL,
                         $this->idUser,
                         $this->idUserAdmin,
@@ -93,6 +94,7 @@ class ScheduleModel{
                         '$this->vDateCreation',
                         '$this->vDateEvent',
                         '$this->vDateDelivery',
+                        '$this->vDateUpdate'
                         '$this->vImageINE',
                         '$this->vImageProduct',
                         '$this->vImageAddressProof',
@@ -125,6 +127,7 @@ class ScheduleModel{
                 vDateCreation = '$this->vDateCreation',
                 vDateEvent = '$this->vDateEvent',
                 vDateDelivery = '$this->vDateDelivery',
+                vDateUpdate = '$this->vDateUpdate',
                 vImageINE = '$this->vImageINE',
                 vImageProduct = '$this->vImageProduct',
                 vImageAddressProof = '$this->vImageAddressProof'
@@ -143,6 +146,7 @@ class ScheduleModel{
         $query="UPDATE $this->table 
                 SET
                 vAdvance = '$this->vAdvance',
+                vDateUpdate = '$this->vDateUpdate',
                 iStatus = $this->iStatus
                 WHERE
                 idSchedule = $this->idSchedule";
