@@ -23,6 +23,7 @@ define("CONTROLADOR_CATALOG", "Catalog");
 define("CONTROLADOR_CATALOG_RENT", "CatalogRent");
 define("CONTROLADOR_SEARCH", "Search");
 define("CONTROLADOR_PAY", "Pay");
+define("CONTROLADOR_OPEN_PAY", "OpenPay");
 define("CONTROLADOR_PRODUCT", "Product");
 define("CONTROLADOR_PRODUCT_RENT", "ProductRent");
 define("CONTROLADOR_USUARIOS", "Usuarios");

@@ -13,7 +13,7 @@ class AdminPromotionController extends ControladorBase{
     public function index(){
         session_start();
         
-        if ($_SESSION['idPermissions'] != "1" || $_SESSION['idPermissions'] != null) {
+        if ($_SESSION['idPermissions'] != "1" || isset($_SESSION['idPermissions'])) {
     
             $promotionModel             = new PromotionModel($this->adapter);
             $info_promotion             = $promotionModel->getAll();

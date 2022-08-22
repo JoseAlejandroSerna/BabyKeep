@@ -19,7 +19,7 @@ class AdminKidByCardController extends ControladorBase{
 
         if (isset($_SESSION['vUser_view'])) {   $vUser  = $_SESSION['vUser_view'];     }
 
-        if ($_SESSION['idPermissions'] != "1" || $_SESSION['idPermissions'] != null) {
+        if ($_SESSION['idPermissions'] != "1" || isset($_SESSION['idPermissions'])) {
     
             $kidByCardModel             = new KidByCardModel($this->adapter);
             $kidByCardModel->idCard     = $idCard;

@@ -19,7 +19,7 @@ class AdminResponseController extends ControladorBase{
 
         if (isset($_SESSION['vHourTest'])) {        $vHourTest  = $_SESSION['vHourTest'];     }
 
-        if ($_SESSION['idPermissions'] != "1" || $_SESSION['idPermissions'] != null) {
+        if ($_SESSION['idPermissions'] != "1" || isset($_SESSION['idPermissions'])) {
     
             $userTestModel              = new UserTestModel($this->adapter);
             $userTestModel->idQuiz      = $idQuiz;

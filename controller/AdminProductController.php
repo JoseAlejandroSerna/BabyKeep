@@ -13,7 +13,7 @@ class AdminProductController extends ControladorBase{
     public function index(){
         session_start();
         
-        if ($_SESSION['idPermissions'] != "1" || $_SESSION['idPermissions'] != null) {
+        if ($_SESSION['idPermissions'] != "1" || isset($_SESSION['idPermissions'])) {
     
             $productModel               = new ProductModel($this->adapter);
             $info_admin_product         = $productModel->getAll();

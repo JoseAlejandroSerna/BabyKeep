@@ -13,7 +13,7 @@ class AdminCardController extends ControladorBase{
     public function index(){
         session_start();
         
-        if ($_SESSION['idPermissions'] != "1" || $_SESSION['idPermissions'] != null) {
+        if ($_SESSION['idPermissions'] != "1" || isset($_SESSION['idPermissions'])) {
     
             $cardModel                  = new CardModel($this->adapter);
             $info_cardModel             = $cardModel->getAll();

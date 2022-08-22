@@ -38,6 +38,9 @@
 <?php if($view == "User"){ ?>
     <script src="js/user.js"></script>
 <?php } ?>
+<?php if($view == "OpenPay"){ ?>
+    <script src="js/openPay.js"></script>
+<?php } ?>
 
 <script src="js/cart.js"></script>
 

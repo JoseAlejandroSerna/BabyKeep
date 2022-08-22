@@ -19,7 +19,7 @@ class AdminQuestionsController extends ControladorBase{
 
         if (isset($_SESSION['vQuiz_view'])) {   $vQuiz  = $_SESSION['vQuiz_view'];     }
 
-        if ($_SESSION['idPermissions'] != "1" || $_SESSION['idPermissions'] != null) {
+        if ($_SESSION['idPermissions'] != "1" || isset($_SESSION['idPermissions'])) {
     
             $questionsModel             = new QuestionsModel($this->adapter);
             $questionsModel->idQuiz     = $idQuiz;

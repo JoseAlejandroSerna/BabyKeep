@@ -13,7 +13,7 @@ class AdminUserTestController extends ControladorBase{
     public function index(){
         session_start();
         
-        if ($_SESSION['idPermissions'] != "1" || $_SESSION['idPermissions'] != null) {
+        if ($_SESSION['idPermissions'] != "1" || isset($_SESSION['idPermissions'])) {
     
             $quizModel                  = new QuizModel($this->adapter);
             $info_quiz                  = $quizModel->getAll();

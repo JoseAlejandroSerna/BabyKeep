@@ -13,7 +13,7 @@ class AdminBranchController extends ControladorBase{
     public function index(){
         session_start();
         
-        if ($_SESSION['idPermissions'] != "1" || $_SESSION['idPermissions'] != null) {
+        if ($_SESSION['idPermissions'] != "1" || isset($_SESSION['idPermissions'])) {
     
             $branchModel            = new BranchModel($this->adapter);
             $info_branch            = $branchModel->getAll();

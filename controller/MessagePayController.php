@@ -18,7 +18,7 @@ class MessagePayController extends ControladorBase{
         if (isset($_SESSION['vMessagePay'])) {   $vMessagePay = $_SESSION['vMessagePay'];     }
         else{                                   $_SESSION['vMessagePay'] = ""; }
 
-        if ($_SESSION['idPermissions'] != "1" || $_SESSION['idPermissions'] != null) {
+        if ($_SESSION['idPermissions'] != "1" || isset($_SESSION['idPermissions'])) {
             
 
             $notificationsModel         = new NotificationsModel($this->adapter);
